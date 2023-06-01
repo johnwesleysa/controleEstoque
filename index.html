@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--reset css-->
+  <link rel="stylesheet" href="src/style/reset.css">
+
+  <!--style css-->
+  <link rel="stylesheet" href="src/style/style.css">
+
+  <!--Fonte Roboto by Google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,700&display=swap" rel="stylesheet">
+
+  <title>Estoque Toner</title>
+</head>
+<body>
+
+  <!--Header-->
+<header class="header">
+  <div class="logo">
+    <p>Escola <strong>Eleva</strong><br>Recife</p>
+  </div>
+  <div class="lista-nav">
+    <nav class="navegacao">
+      <ul class="lista-links">
+        <li class="item-lista-links"><a href="index.html">Home</a></li>
+        <li class="item-lista-links"><a href="historico.html">Histórico</a></li>
+        <li class="item-lista-links"><a href="#">Teste</a></li>
+        <li class="item-lista-links"><a href="#">Teste</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!--Body-->
+
+<div class="content">
+
+  <!--Div que mostra os itens e as quantidades do banco de dados-->
+  <div class="listar">
+    <div class="title">
+      <h1>Itens em Estoque</h1>
+      <p>Impressora Xerox</p>
+    </div>
+    <div class="item-quantidade-banco">
+      <div class="item-banco">
+        <ul id="id-lista-item" class="lista-item">
+          <li id="id0-item-lista-item" class="item-lista-item"><h2><strong>Item</strong></h2></li><br>
+          <li id="id1-item-lista-item" class="item-lista-item">Toner Amarelo</li>
+          <li id="id2-item-lista-item" class="item-lista-item">Toner Ciano</li>
+          <li id="id3-item-lista-item" class="item-lista-item">Toner Magenta</li>
+          <li id="id4-item-lista-item" class="item-lista-item">Toner Preto</li>
+          <li id="id5-item-lista-item" class="item-lista-item">Cartucho de Resíduo</li>
+        </ul>
+      </div>
+      <div class="quantidade-banco">
+        <ul id="id-lista-quantidade" class="lista-quantidade">
+          <li id="id0-item-lista-quantidade" class="item-lista-quantidade"><h2><strong>Quantidade</strong></h2></li> <br>
+          <li id="id1-item-lista-quantidade" class="item-lista-quantidade">10</li>
+          <li id="id2-item-lista-quantidade" class="item-lista-quantidade">10</li>
+          <li id="id3-item-lista-quantidade" class="item-lista-quantidade">10</li>
+          <li id="id4-item-lista-quantidade" class="item-lista-quantidade">10</li>
+          <li id="id5-item-lista-quantidade" class="item-lista-quantidade">10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--Div para adicionar ou remover algo do bd-->
+  <div class="adicionar-remover-bd">
+
+    <!--Adicionar item ao BD-->
+    <div class="adicionar-bd">
+      <h1>Adicionar Item ao estoque</h1> <br>
+      <form action="src/php/processa.php" method="post">
+        <div class="selecionar-quantidade-add">
+          <label for="adicionar-item">Selecione um item: </label>
+          <select name="adicionar_item" id="adicionar-item">
+            <option value="" selected>Selecione uma opção</option>
+            <option value="1">Toner Amarelo</option>
+            <option value="2">Toner Ciano</option>
+            <option value="3">Toner Magenta</option>
+            <option value="4">Toner Preto</option>
+            <option value="5">Cartucho de Resíduo</option>
+          </select> <br> <br>
+        </div>
+        <div class="adicionar-quantidade-add">
+          <label for="number">Insira a quantidade: </label>
+          <input type="number" name="adicionar_quantidade" class="adicionar-quantidade" placeholder="Digite aqui">
+          <input type="submit" name="enviar_formulario" class="enviar-formulario" value="enviar">
+        </div>
+      </form>
+    </div> <br> <br>
+
+    <!--Remover item do BD-->
+    <div class="remover-bd">
+      <h1>Remover Item do estoque</h1> <br>
+      <form action="src/php/remove.php" method="post">
+        <div class="selecionar-quantidade-remove">
+          <label for="remover-item">Selecione um item: </label>
+          <select name="remover_item" id="remover-item">
+            <option value="" selected>Selecione uma opção</option>
+            <option value="1">Toner Amarelo</option>
+            <option value="1">Toner Ciano</option>
+            <option value="1">Toner Magenta</option>
+            <option value="1">Toner Preto</option>
+            <option value="1">Cartucho de Resíduo</option>
+          </select> <br> <br>
+        </div>
+        <div class="adicionar-quantidade-remove">
+          <label for="quantidade">Insira a quantidade: </label>
+          <input type="number" name="remover_quantidade" class="remover-quantidade" placeholder="Digite aqui">
+          <input type="submit" name="enviar_formulario" class="enviar-formulario" value="enviar">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+  <!--Footer-->
+<footer class="footer">
+  <div class="content-footer">
+    <h3>Escola Eleva Recife</h3>
+    <p>Criado por <strong>John Wesley</strong></p>
+  </div>
+</footer>
+
+
+</body>
+</html>
