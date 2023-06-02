@@ -51,23 +51,24 @@
       <div class="item-banco">
         <ul id="id-lista-item" class="lista-item">
           <li id="id0-item-lista-item" class="item-lista-item"><h2><strong>Item</strong></h2></li><br>
-          <li id="id1-item-lista-item" class="item-lista-item">Toner Amarelo</li>
-          <li id="id2-item-lista-item" class="item-lista-item">Toner Ciano</li>
-          <li id="id3-item-lista-item" class="item-lista-item">Toner Magenta</li>
-          <li id="id4-item-lista-item" class="item-lista-item">Toner Preto</li>
-          <li id="id5-item-lista-item" class="item-lista-item">Cartucho de Resíduo</li>
+          <li id="id1-item-lista-item" class="item-lista-item"></li>
+          <li id="id2-item-lista-item" class="item-lista-item"></li>
+          <li id="id3-item-lista-item" class="item-lista-item"></li>
+          <li id="id4-item-lista-item" class="item-lista-item"></li>
+          <li id="id5-item-lista-item" class="item-lista-item"></li>
         </ul>
       </div>
       <div class="quantidade-banco">
         <ul id="id-lista-quantidade" class="lista-quantidade">
           <li id="id0-item-lista-quantidade" class="item-lista-quantidade"><h2><strong>Quantidade</strong></h2></li> <br>
-          <li id="id1-item-lista-quantidade" class="item-lista-quantidade">10</li>
-          <li id="id2-item-lista-quantidade" class="item-lista-quantidade">10</li>
-          <li id="id3-item-lista-quantidade" class="item-lista-quantidade">10</li>
-          <li id="id4-item-lista-quantidade" class="item-lista-quantidade">10</li>
-          <li id="id5-item-lista-quantidade" class="item-lista-quantidade">10</li>
+          <li id="id1-item-lista-quantidade" class="item-lista-quantidade"></li>
+          <li id="id2-item-lista-quantidade" class="item-lista-quantidade"></li>
+          <li id="id3-item-lista-quantidade" class="item-lista-quantidade"></li>
+          <li id="id4-item-lista-quantidade" class="item-lista-quantidade"></li>
+          <li id="id5-item-lista-quantidade" class="item-lista-quantidade"></li>
         </ul>
       </div>
+      
     </div>
   </div>
 
@@ -77,16 +78,16 @@
     <!--Adicionar item ao BD-->
     <div class="adicionar-bd">
       <h1>Adicionar Item ao estoque</h1> <br>
-      <form action="src/php/processa.php" method="post">
+      <form action="php/processa.php" method="post">
         <div class="selecionar-quantidade-add">
           <label for="adicionar-item">Selecione um item: </label>
           <select name="adicionar_item" id="adicionar-item">
             <option value="" selected>Selecione uma opção</option>
-            <option value="1">Toner Amarelo</option>
-            <option value="2">Toner Ciano</option>
-            <option value="3">Toner Magenta</option>
-            <option value="4">Toner Preto</option>
-            <option value="5">Cartucho de Resíduo</option>
+            <option value="Toner Amarelo">Toner Amarelo</option>
+            <option value="Toner Ciano">Toner Ciano</option>
+            <option value="Toner Magenta">Toner Magenta</option>
+            <option value="Toner Preto">Toner Preto</option>
+            <option value="Cartucho de Residuo">Cartucho de Resíduo</option>
           </select> <br> <br>
         </div>
         <div class="adicionar-quantidade-add">
@@ -100,22 +101,22 @@
     <!--Remover item do BD-->
     <div class="remover-bd">
       <h1>Remover Item do estoque</h1> <br>
-      <form action="src/php/remove.php" method="post">
+      <form action="php/remove.php" method="post">
         <div class="selecionar-quantidade-remove">
           <label for="remover-item">Selecione um item: </label>
           <select name="remover_item" id="remover-item">
             <option value="" selected>Selecione uma opção</option>
-            <option value="1">Toner Amarelo</option>
-            <option value="1">Toner Ciano</option>
-            <option value="1">Toner Magenta</option>
-            <option value="1">Toner Preto</option>
-            <option value="1">Cartucho de Resíduo</option>
+            <option value="Toner Amarelo">Toner Amarelo</option>
+            <option value="Toner Ciano">Toner Ciano</option>
+            <option value="Toner Magenta">Toner Magenta</option>
+            <option value="Toner Preto">Toner Preto</option>
+            <option value="Cartucho de Residuo">Cartucho de Resíduo</option>
           </select> <br> <br>
         </div>
         <div class="adicionar-quantidade-remove">
           <label for="quantidade">Insira a quantidade: </label>
           <input type="number" name="remover_quantidade" class="remover-quantidade" placeholder="Digite aqui">
-          <input type="submit" name="enviar_formulario" class="enviar-formulario" value="enviar">
+          <input type="submit" name="enviar_formulario" class="enviar-formulario_remover" value="enviar">
         </div>
       </form>
     </div>

@@ -5,7 +5,7 @@ $password = ""; //senha de usuário, no caso em branco que é o padrão do xampp
 $nameDb = "estoque_db"; //nome do banco de dados
 
 // Estabelecer conexão com o BD
-$conexao = new mysqli($servername, $username, $password, $nameDb);
+$conn = new mysqli($servername, $username, $password, $nameDb);
 
 
 // Verifica conexão com o banco de dados

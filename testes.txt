@@ -1,9 +1,11 @@
+isso funciona: processa.php
+
 <?php
 
 include "conexao.php";
 
 //VERIFICA SE OS DADOS ENVIADOS ESTÃO NO MODO POST
-if ($_SERVER ['REQUEST METHOD'] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
     //PUXA OS DADOS QUE RECEBEU DA REQUISIÇÃO E ARMAZENA EM UMA VÁRIAVEL
 
     $adicionar_item = $_POST["adicionar_item"];
@@ -12,6 +14,19 @@ if ($_SERVER ['REQUEST METHOD'] == "POST") {
     //$remover_item = $_POST["remover_item"];
     //$remover_quantidade = $_POST["remover_quantidade"];
 
+    //comando sql para enviar os dados para ao banco, porém, não envia, apenas armazena o código na váriavel $inserirDadosNoBanco
     $inserirDadosNoBanco = "INSERT INTO estoque (item, quantidade, data_insercao) VALUES ('$adicionar_item', '$adicionar_quantidade', now())";
+
     
+
+
+    //Envia os dados de inserir dados no banco no banco
+    $enviarParaOBanco = mysqli_query($conn, $inserirDadosNoBanco);
+
+    //Após enviar os dados continua no arquivo index.html
+    if (mysqli_insert_id($conn)) {
+        header("Location: ../index.html");
+    } else {
+        header("Location: ../index.html");
+    }
 }
