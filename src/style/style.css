@@ -91,6 +91,30 @@ li {
   
 }
 
+.content > .listar > .tbItensEstoque table, th, td {
+  border: 1px solid #000000;
+  padding: 0.5rem;
+  width: 150px;
+}
+
+.content > .listar > .tbItensEstoque {
+  border-collapse: collapse;
+  overflow:hidden;
+  border: solid #000000 1px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+   
+          
+}
+
+.content > .listar > .tbItensEstoque th:nth-child(2) {
+  text-align: center;
+}
+
+.content > .listar > .tbItensEstoque td:nth-child(2) {
+  text-align: center;
+}
+
 .content > .adicionar-remover-bd {
   
   border-radius: 20px;
@@ -155,6 +179,6 @@ li {
 }
 
 .footer > .content-footer {
-  padding: 2rem;
+  padding: 0.5rem;
   top: 100%;
 }

@@ -27,8 +27,8 @@
   <div class="lista-nav">
     <nav class="navegacao">
       <ul class="lista-links">
-        <li class="item-lista-links"><a href="index.html">Home</a></li>
-        <li class="item-lista-links"><a href="historico.html">Histórico</a></li>
+        <li class="item-lista-links"><a href="index.php">Home</a></li>
+        <li class="item-lista-links"><a href="historico.php">Histórico</a></li>
         <li class="item-lista-links"><a href="#">Teste</a></li>
         <li class="item-lista-links"><a href="#">Teste</a></li>
       </ul>
