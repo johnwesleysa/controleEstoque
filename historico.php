@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="src/style/reset.css">
 
   <!--style css-->
-  <link rel="stylesheet" href="src/style/style.css">
+  <link rel="stylesheet" href="src/style/styleHistorico.css">
 
     <!--Fonte Roboto by Google-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,36 +39,21 @@
   <!--Body-->
 <div class="content">
     <div class="historico">
-        <h1>Histórico das últimas atualizações do Estoque</h1>
-        <table class="historico-estoque">
-            <thead class="item-historico-estoque">
-                <th>Item</th>
-                <th>Quantidade</th>
-                <th>Data</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Toner Amarelo</td>
-                    <td>Removido 10</td>
-                    <td>15/05/2023</td>
-                </tr>
-                <tr>
-                    <td>Toner Amarelo</td>
-                    <td>Adicionado 10</td>
-                    <td>15/05/2023</td>
-                </tr>
-                <tr>
-                    <td>Toner Ciano</td>
-                    <td>Adicionado 10</td>
-                    <td>15/05/2023</td>
-                </tr>
-                <tr>
-                    <td>Toner Preto</td>
-                    <td>Removido 10</td>
-                    <td>15/05/2023</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1>Histórico de entradas e saídas</h1>
+        <div class="tabela">
+          <table class="historico-estoque">
+              <thead class="item-historico-estoque">
+                  <th>Item</th>
+                  <th>Quantidade</th>
+                  <th>Data</th>
+              </thead>
+              <tbody>
+                <?php
+                include "php/historico.php"
+                ?>
+              </tbody>
+          </table>
+        </div>
     </div>
 </div>
 

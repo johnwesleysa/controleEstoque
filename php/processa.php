@@ -22,12 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $novaQuantidade = $quantidade_banco + $adicionar_quantidade;
 
         //Atualiza item no banco
-        $sqlUpdate = "UPDATE estoque SET quantidade = $novaQuantidade WHERE item = '$adicionar_item'";
+        $sqlUpdate = "UPDATE estoque SET quantidade = $novaQuantidade WHERE item = '$adicionar_item'";$sqlInsertHistorico = "INSERT INTO historico (acao, item, quantidade) VALUES ('Adicionado', '$adicionar_item', '$adicionar_quantidade')";
+        
         mysqli_query($conn, $sqlUpdate);
+        mysqli_query($conn, $sqlInsertHistorico);
+
     } else {
         // O item não existe no estoque, insere uma linha
         $sqlInsert = "INSERT INTO estoque (item, quantidade, data_insercao) VALUES ('$adicionar_item', '$adicionar_quantidade', NOW())";
         mysqli_query($conn, $sqlInsert);
+        mysqli_query($conn, $sqlInsertHistorico);
     }
 }
 

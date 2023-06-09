@@ -24,6 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         //Atualiza item no banco
         $sqlUpdate = "UPDATE estoque SET quantidade = $novaQuantidade WHERE item = '$remover_item'";
         mysqli_query($conn, $sqlUpdate);
+        
+        $sqlInsertHistorico = "INSERT INTO historico (acao, item, quantidade) VALUES ('Removido', '$remover_item', '$remover_quantidade')";
+        mysqli_query($conn, $sqlInsertHistorico);
     } 
 }
 

@@ -1,0 +1,104 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+    height: 100%;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #f69324;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+  }
+  
+  .header > .logo {
+    padding: 2rem;
+  }
+  
+  .header > .lista-nav {
+    padding: 2rem;
+  }
+  
+  .header > .lista-nav > .navegacao > .lista-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  
+  .header > .lista-nav > .navegacao > .lista-links > .item-lista-links {
+    margin-right: 2rem;
+    text-align: center;
+  }
+  
+  .header > .lista-nav > .navegacao > .lista-links > .item-lista-links > a {
+    text-decoration: none;
+    color: #f69324;
+    transition: 0.5s;
+  }
+  
+  .header > .lista-nav > .navegacao > .lista-links > .item-lista-links > a:hover {
+    animation: backwards;
+  }
+  
+  
+  .header > .lista-nav > .navegacao > .lista-links > .item-lista-links > a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    background-color: black;
+    transition: 0.2s;
+  }
+  
+  .header > .lista-nav > .navegacao > .lista-links > .item-lista-links > a:hover::after {
+    width: 100%;
+  }
+
+  .content > .historico > h1 {
+    text-align: center;
+    margin: 1rem 0rem 1rem 0rem;
+  }
+
+  .content > .historico > .tabela {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content > .historico > .tabela th, td {
+    border: 1px solid black;
+    padding: 0.5rem;
+    
+  }
+
+  .content > .historico > .tabela table {
+    border-collapse: collapse;
+  }
+
+
+
+
+
+
+
+  .footer {
+    background-color: #f69324;
+    position: fixed;
+    bottom: 0;
+    
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer > .content-footer {
+    padding: 0.5rem;
+    top: 100%;
+  }
